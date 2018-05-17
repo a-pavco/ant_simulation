@@ -1,0 +1,1960 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="ant">
+    <static>false</static>
+    
+    <pose>0 0 8 0 0 0</pose>
+    
+    <link name="ant_head">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.9808180000e+01 -->
+				<mass> 30.0 </mass>
+				<pose> -1.0832000000e-04  1.1374692380e+01  3.4271000000e-03 0 0 0 </pose>
+				<inertia>
+					<ixx>  6.1372709332e+01 </ixx>
+					<ixy> -2.4209532812e-02 </ixy>
+					<ixz> -2.7104785800e-04 </ixz>
+					<iyy>  6.3649281062e+01 </iyy>
+					<iyz>  7.1256139380e+00 </iyz>
+					<izz>  8.1137643143e+01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_head_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-head.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_head_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-head.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_thorax">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  5.6691524000e+01 -->
+				<mass> 40.0 </mass>
+				<pose>  1.5381500000e-03  5.1088247700e+00  1.3039759800e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.1574865398e+02 </ixx>
+					<ixy> -1.5499513134e-01 </ixy>
+					<ixz> -4.3375096425e-02 </ixz>
+					<iyy>  5.3331719151e+01 </iyy>
+					<iyz> -1.7571679462e+01 </iyz>
+					<izz>  2.2341557491e+02 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_thorax_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-thorax.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_thorax_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-thorax.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_petiole">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.8455720000e+00 -->
+				<mass> 5.0 </mass>
+				<pose> -2.9461790000e-02  4.0780300000e-03  2.9057617000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.7897944003e+00 </ixx>
+					<ixy>  3.5781084256e-03 </ixy>
+					<ixz> -3.2402220006e-03 </ixz>
+					<iyy>  2.5550380430e+00 </iyy>
+					<iyz> -4.0086618959e-01 </iyz>
+					<izz>  2.0464923935e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_petiole_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-petiole.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_petiole_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-petiole.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_node">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  8.8132806250e-01 -->
+				<mass> 2.0 </mass>
+				<pose>  2.2576800000e-03 -1.1466654200e+00 -2.3731291000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.5458615208e-01 </ixx>
+					<ixy> -4.6808282018e-04 </ixy>
+					<ixz>  2.2591796230e-03 </ixz>
+					<iyy>  2.1462833835e-01 </iyy>
+					<iyz> -6.3565631669e-04 </iyz>
+					<izz>  3.8425372799e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_node_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-node.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_node_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-node.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_gaster">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.1690452800e+02 -->
+				<mass> 50.0 </mass>
+				<pose> -1.3567500000e-03 -4.2677133200e+00 -1.2882785000e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.1499897432e+02 </ixx>
+					<ixy>  4.7902818615e-03 </ixy>
+					<ixz>  2.4293472704e-02 </ixz>
+					<iyy>  1.6370285624e+02 </iyy>
+					<iyz> -3.1591478716e+01 </iyz>
+					<izz>  2.2056166084e+02 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_gaster_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-gaster.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_gaster_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-gaster.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_dots">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.5318692383e-02 -->
+				<mass> 0.05 </mass>
+				<pose>  6.3633600000e-03  1.0898397220e+01  1.9645867900e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.0825855946e-03 </ixx>
+					<ixy>  8.6340226824e-05 </ixy>
+					<ixz> -8.5934367995e-06 </ixz>
+					<iyy>  1.6503088755e-02 </iyy>
+					<iyz>  1.6174642640e-03 </iyz>
+					<izz>  2.2680350993e-02 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_dots_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-head-dots.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_dots_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-head-dots.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_scape_bed_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.6364916992e-02 -->
+				<mass> 0.01 </mass>
+				<pose> -6.9351143000e-01  1.2918155520e+01  9.4607796000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.6391522189e-04 </ixx>
+					<ixy>  8.4867973631e-06 </ixy>
+					<ixz>  1.4959579775e-05 </ixz>
+					<iyy>  1.3708005675e-04 </iyy>
+					<iyz>  5.9590578765e-05 </iyz>
+					<izz>  1.8736943496e-04 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_scape_bed_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-scape-bed-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_scape_bed_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-scape-bed-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_scape_bed_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.6364916016e-02 -->
+				<mass> 0.01 </mass>
+				<pose>  6.9350555000e-01  1.2918125000e+01  9.4607239000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.6966642220e-04 </ixx>
+					<ixy> -8.6977016021e-06 </ixy>
+					<ixz> -1.4974116336e-05 </ixz>
+					<iyy>  1.3722462723e-04 </iyy>
+					<iyz>  6.0270287152e-05 </iyz>
+					<izz>  1.9287002432e-04 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_scape_bed_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-scape-bed-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_scape_bed_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-scape-bed-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_scape_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.3828756250e-01 -->
+				<mass> 1.5 </mass>
+				<pose> -6.9286827000e-01  1.3002055660e+01  3.5254946900e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.8407010273e+00 </ixx>
+					<ixy>  9.7189643667e-05 </ixy>
+					<ixz>  4.8090702123e-02 </ixz>
+					<iyy>  3.8406896760e+00 </iyy>
+					<iyz> -2.7540595732e-02 </iyz>
+					<izz>  1.9114349201e-02 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_scape_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-scape-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_scape_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-scape-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_scape_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.3828768750e-01 -->
+				<mass> 1.5 </mass>
+				<pose>  6.9286339000e-01  1.3002059330e+01  3.5254934700e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.8406151545e+00 </ixx>
+					<ixy> -9.2013978764e-05 </ixy>
+					<ixz> -4.8095334832e-02 </ixz>
+					<iyy>  3.8407064189e+00 </iyy>
+					<iyz> -2.7592838714e-02 </iyz>
+					<izz>  1.9017779948e-02 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_scape_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-scape-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_scape_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-scape-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_flagellum_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.7003686250e+00 -->
+				<mass> 2.0 </mass>
+				<pose> -2.2783602900e+00  1.8096794430e+01  6.9645684800e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  6.8447672826e+00 </ixx>
+					<ixy>  2.3715171922e+00 </ixy>
+					<ixz>  3.2027696488e-01 </ixz>
+					<iyy>  1.1070039310e+00 </iyy>
+					<iyz> -9.3302339779e-01 </iyz>
+					<izz>  7.5566933541e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_flagellum_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-flagellum-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_flagellum_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-flagellum-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_flagellum_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.7003697500e+00 -->
+				<mass> 2.0 </mass>
+				<pose>  2.2783601400e+00  1.8096795650e+01  6.9645684800e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  6.8446167754e+00 </ixx>
+					<ixy> -2.3715016516e+00 </ixy>
+					<ixz> -3.2026835199e-01 </ixz>
+					<iyy>  1.1070399341e+00 </iyy>
+					<iyz> -9.3298435873e-01 </iyz>
+					<izz>  7.5564739634e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_flagellum_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-flagellum-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_flagellum_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-flagellum-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_mandible_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  9.1626437500e-01 -->
+				<mass> 3.0 </mass>
+				<pose> -8.7512321000e-01  1.3990306400e+01 -1.3889303600e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.1768554324e+00 </ixx>
+					<ixy> -2.1898540451e-01 </ixy>
+					<ixz>  1.1513220647e-01 </ixz>
+					<iyy>  5.1377723378e-01 </iyy>
+					<iyz>  3.6265367537e-01 </iyz>
+					<izz>  1.0499598507e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_mandible_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-mandible-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_mandible_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-mandible-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_mandible_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  9.1938162500e-01 -->
+				<mass> 3.0 </mass>
+				<pose>  8.7410187000e-01  1.3990351560e+01 -1.3892451500e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.1817675386e+00 </ixx>
+					<ixy>  2.1995866885e-01 </ixy>
+					<ixz> -1.1651211150e-01 </ixz>
+					<iyy>  5.1603105033e-01 </iyy>
+					<iyz>  3.6500748120e-01 </iyz>
+					<izz>  1.0535666975e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_mandible_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-mandible-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_mandible_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-mandible-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_eye_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  8.5441757812e-02 -->
+				<mass> 0.05 </mass>
+				<pose> -2.1424304200e+00  1.1802451170e+01  2.6879721000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  4.0909223891e-03 </ixx>
+					<ixy> -5.3988256072e-04 </ixy>
+					<ixz> -3.0926034502e-04 </ixz>
+					<iyy>  2.1646172169e-03 </iyy>
+					<iyz>  5.2875942814e-04 </iyz>
+					<izz>  2.6847787999e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_eye_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-eye-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_eye_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-eye-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_eye_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  8.5441500000e-02 -->
+				<mass> 0.05 </mass>
+				<pose>  2.1424305700e+00  1.1802476810e+01  2.6879797000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  4.0763699139e-03 </ixx>
+					<ixy>  5.4277183804e-04 </ixy>
+					<ixz>  3.0926262413e-04 </ixz>
+					<iyy>  2.1657316409e-03 </iyy>
+					<iyz>  5.2959042152e-04 </iyz>
+					<izz>  2.6718571186e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_eye_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-eye-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_eye_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-eye-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- front left leg links FLL-->
+    
+    <link name="ant_cox_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.5521617500e+00 -->
+				<mass> 3.0 </mass>
+				<pose> -1.1849076100e+00  6.0856909200e+00 -4.0222927000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.5768846297e-01 </ixx>
+					<ixy>  1.7005788603e-01 </ixy>
+					<ixz>  5.7852710942e-03 </ixz>
+					<iyy>  1.1727972097e+00 </iyy>
+					<iyz>  5.6909853774e-02 </iyz>
+					<izz>  1.2224152912e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_cox_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  6.6827581250e-01 -->
+				<mass> 1.0 </mass>
+				<pose> -2.5996395900e+00  6.6198309300e+00 -2.2813530000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.1496440267e-01 </ixx>
+					<ixy>  3.4858491007e-02 </ixy>
+					<ixz>  1.4360769641e-03 </ixz>
+					<iyy>  1.4220481517e-01 </iyy>
+					<iyz> -1.1846910889e-02 </iyz>
+					<izz>  1.5255737899e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.3717011250e+00 -->
+				<mass> 5.0 </mass>
+				<pose> -3.9282754500e+00  8.2737921100e+00  1.2403624000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.6197642457e+00 </ixx>
+					<ixy>  2.1775364163e+00 </ixy>
+					<ixz>  3.8242520797e-01 </ixz>
+					<iyy>  1.8778697845e+00 </iyy>
+					<iyz> -5.2415364462e-01 </iyz>
+					<izz>  5.0117853596e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.0788066250e+00 -->
+				<mass> 4.0 </mass>
+				<pose> -5.1680456500e+00  9.5882269300e+00 -1.8314581300e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  5.6769505167e+00 </ixx>
+					<ixy> -9.1392209980e-02 </ixy>
+					<ixz> -4.1384680225e-01 </ixz>
+					<iyy>  5.5128989027e+00 </iyy>
+					<iyz> -9.6529489518e-01 </iyz>
+					<izz>  3.8081446228e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.8057241210e-03 -->
+				<mass> 0.1 </mass>
+				<pose> -5.5428143300e+00  8.8254345700e+00 -3.9154705800e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.6563199427e-03 </ixx>
+					<ixy> -1.3215531959e-03 </ixy>
+					<ixz> -8.0965488486e-04 </ixz>
+					<iyy>  1.7983629153e-03 </iyy>
+					<iyz> -1.6165105324e-03 </iyz>
+					<izz>  3.2400233459e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_front_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.3488284375e-01 -->
+				<mass> 2.0 </mass>
+				<pose> -6.4053460700e+00  9.8808795200e+00 -5.6130676300e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.0383412574e+00 </ixx>
+					<ixy>  5.0790120060e-01 </ixy>
+					<ixz> -1.2739759948e+00 </ixz>
+					<iyy>  2.7268712920e+00 </iyy>
+					<iyz>  6.6243787205e-01 </iyz>
+					<izz>  1.2557246830e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_front_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_front_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-front-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- middle left leg links MLL-->
+    
+		<link name="ant_cox_middle_left">
+			<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.5373452500e+00 -->
+				<mass> 3.0 </mass>
+				<pose> -1.4438639800e+00  3.7408190900e+00 -1.8413689000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.8260573866e-01 </ixx>
+					<ixy> -1.9846590636e-01 </ixy>
+					<ixz> -2.0231143554e-03 </ixz>
+					<iyy>  1.1383764760e+00 </iyy>
+					<iyz>  6.4265649619e-02 </iyz>
+					<izz>  1.2384929781e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_cox_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_middle_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  6.7022812500e-01 -->
+				<mass> 1.0 </mass>
+				<pose> -2.6420379600e+00  3.1116726700e+00  1.1129967000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.1101995697e-01 </ixx>
+					<ixy> -3.3613121204e-02 </ixy>
+					<ixz>  1.1913985257e-02 </ixz>
+					<iyy>  1.4858710622e-01 </iyy>
+					<iyz> -4.0038853935e-03 </iyz>
+					<izz>  1.5366513364e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_middle_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.4913866250e+00 -->
+				<mass> 5.0 </mass>
+				<pose> -4.8465109300e+00  2.1178683500e+00  6.5806900000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.5111447845e+00 </ixx>
+					<ixy> -2.2827053904e+00 </ixy>
+					<ixz>  1.2224953298e+00 </ixz>
+					<iyy>  6.0794410410e+00 </iyy>
+					<iyz>  5.2271625542e-01 </iyz>
+					<izz>  6.7716874529e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_middle_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.1381872500e+00 -->
+				<mass> 4.0 </mass>
+				<pose> -7.5691229200e+00  1.0029983500e+00 -8.7933907000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  5.1136973632e+00 </ixx>
+					<ixy> -2.1964789642e-01 </ixy>
+					<ixz> -1.5570160091e+00 </ixz>
+					<iyy>  5.5119473180e+00 </iyy>
+					<iyz> -7.4216810283e-01 </iyz>
+					<izz>  7.9706175728e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_middle_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.2007011720e-03 -->
+				<mass> 0.1 </mass>
+				<pose> -7.7354467800e+00  3.9209312000e-01 -2.9733374000e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.9977127702e-03 </ixx>
+					<ixy>  1.4149262841e-03 </ixy>
+					<ixz>  1.3159483140e-03 </ixz>
+					<iyy>  3.0285726666e-03 </iyy>
+					<iyz> -9.1294431405e-04 </iyz>
+					<izz>  3.0284548291e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_middle_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.4360196875e-01 -->
+				<mass> 2.0 </mass>
+				<pose> -8.5546972700e+00  1.0811422700e+00 -5.5943951400e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.6814907591e+00 </ixx>
+					<ixy>  3.5543530919e-02 </ixy>
+					<ixz> -4.3935904718e-01 </ixz>
+					<iyy>  2.7333997515e+00 </iyy>
+					<iyz>  2.4487690192e-01 </iyz>
+					<izz>  1.3475215922e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_middle_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_middle_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-middle-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- hind left leg links HLL-->
+    
+		<link name="ant_cox_hind_left">
+			<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.4498582500e+00 -->
+				<mass> 3.0 </mass>
+				<pose> -1.6047468600e+00  1.8127766400e+00 -6.7145103000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  9.7279348468e-01 </ixx>
+					<ixy> -2.4893216773e-01 </ixy>
+					<ixz> -4.3977186027e-02 </ixz>
+					<iyy>  8.8979866554e-01 </iyy>
+					<iyz>  3.9916256869e-02 </iyz>
+					<izz>  1.1924646641e+00 </izz>
+				</inertia>
+			</inertial>			
+    	<collision name="ant_cox_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_hind_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  7.5600106250e-01 -->
+				<mass> 1.0 </mass>
+				<pose> -2.5338975500e+00  7.3375885000e-01 -3.7215218000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.5073148763e-01 </ixx>
+					<ixy> -3.8447467658e-02 </ixy>
+					<ixz>  1.2660324006e-02 </ixz>
+					<iyy>  1.2943070910e-01 </iyy>
+					<iyz>  3.4239571588e-04 </iyz>
+					<izz>  1.6587704941e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_hind_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.0213661250e+00 -->
+				<mass> 5.0 </mass>
+				<pose> -4.4824142500e+00 -1.2080609900e+00  4.0502163000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  6.5537052690e+00 </ixx>
+					<ixy> -5.7615418246e+00 </ixy>
+					<ixz>  1.7949193563e+00 </ixz>
+					<iyy>  6.7640416562e+00 </iyy>
+					<iyz>  1.7889461762e+00 </iyz>
+					<izz>  1.1794042420e+01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_hind_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.3401091250e+00 -->
+				<mass> 4.0 </mass>
+				<pose> -6.9600720200e+00 -4.4782101400e+00 -1.1541245300e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.7173053799e+00 </ixx>
+					<ixy> -5.2599828689e-02 </ixy>
+					<ixz> -1.9881656369e-01 </ixz>
+					<iyy>  7.2343761778e+00 </iyy>
+					<iyz> -1.9348606907e+00 </iyz>
+					<izz>  7.2286763244e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_hind_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.2553720700e-03 -->
+				<mass> 0.1 </mass>
+				<pose> -7.3674774200e+00 -5.0480993700e+00 -3.7760995500e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.9741421202e-03 </ixx>
+					<ixy>  2.3589102584e-04 </ixy>
+					<ixz> -1.0123231990e-03 </ixz>
+					<iyy>  2.4231927506e-03 </iyy>
+					<iyz>  4.4093552683e-04 </iyz>
+					<izz>  8.6267300178e-04 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_hind_left">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.1799150000e-01 -->
+				<mass> 2.0 </mass>
+				<pose> -6.7083300800e+00 -6.8500128200e+00 -5.2314398200e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.3858868805e+00 </ixx>
+					<ixy>  7.6075774747e-02 </ixy>
+					<ixz>  9.0168570414e-02 </ixz>
+					<iyy>  1.9667853495e+00 </iyy>
+					<iyz> -1.6554334105e+00 </iyz>
+					<izz>  1.4653702460e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_hind_left_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_hind_left_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-hind-left.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- front right leg links FRL-->
+    
+		<link name="ant_cox_front_right">
+			<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.4760717500e+00 -->
+				<mass> 3.0 </mass>
+				<pose>  1.1592817700e+00  6.0839971900e+00 -4.1405678000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.5656651420e-01 </ixx>
+					<ixy> -1.6078972639e-01 </ixy>
+					<ixz>  2.2975131314e-02 </ixz>
+					<iyy>  1.1275039835e+00 </iyy>
+					<iyz>  5.7195192991e-02 </iyz>
+					<izz>  1.1844327222e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_cox_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_front_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  5.5651337500e-01 -->
+				<mass> 1.0 </mass>
+				<pose>  2.6059960900e+00  6.6619152800e+00 -2.7211727000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.0497057613e-01 </ixx>
+					<ixy> -3.6631126790e-02 </ixy>
+					<ixz> -3.9228430044e-03 </ixz>
+					<iyy>  1.4323023665e-01 </iyy>
+					<iyz> -2.1808929210e-02 </iyz>
+					<izz>  1.5518180277e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_front_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.3000246250e+00 -->
+				<mass> 5.0 </mass>
+				<pose>  3.8984912100e+00  8.2277655000e+00  1.3008685000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.5605818097e+00 </ixx>
+					<ixy> -2.1346250176e+00 </ixy>
+					<ixz> -4.1254699156e-01 </ixz>
+					<iyy>  1.8632358937e+00 </iyy>
+					<iyz> -5.6765821955e-01 </iyz>
+					<izz>  4.9254199566e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_front_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.0699658750e+00 -->
+				<mass> 4.0 </mass>
+				<pose>  5.1686621100e+00  9.5858447300e+00 -1.8438995400e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  5.5697936408e+00 </ixx>
+					<ixy>  8.9994538190e-02 </ixy>
+					<ixz>  4.0634984476e-01 </ixz>
+					<iyy>  5.4089508408e+00 </iyy>
+					<iyz> -9.4506940495e-01 </iyz>
+					<izz>  3.7695625536e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_front_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.8058068850e-03 -->
+				<mass> 0.1 </mass>
+				<pose>  5.5428179900e+00  8.8252941900e+00 -3.9153860500e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.8002775593e-03 </ixx>
+					<ixy>  1.2446915380e-03 </ixy>
+					<ixz>  8.0803085073e-04 </ixz>
+					<iyy>  1.8387482173e-03 </iyy>
+					<iyz> -1.5395192930e-03 </iyz>
+					<izz>  3.3591713627e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_front_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.3346493750e-01 -->
+				<mass> 2.0 </mass>
+				<pose>  6.4003485100e+00  9.8781713900e+00 -5.6072009300e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.0264224199e+00 </ixx>
+					<ixy> -5.0324785226e-01 </ixy>
+					<ixz>  1.2654551473e+00 </ixz>
+					<iyy>  2.7097661696e+00 </iyy>
+					<iyz>  6.5752556549e-01 </iyz>
+					<izz>  1.2447538164e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_front_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_front_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-front-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- middle right leg links MRL-->
+    
+		<link name="ant_cox_middle_right">
+			<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.5373480000e+00 -->
+				<mass> 3.0 </mass>
+				<pose>  1.4438630700e+00  3.7408187900e+00 -1.8413687000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.8261560527e-01 </ixx>
+					<ixy>  1.9846370872e-01 </ixy>
+					<ixz>  2.0233297128e-03 </ixz>
+					<iyy>  1.1383780268e+00 </iyy>
+					<iyz>  6.4265443763e-02 </iyz>
+					<izz>  1.2385012005e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_cox_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_middle_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  6.7022806250e-01 -->
+				<mass> 1.0 </mass>
+				<pose>  2.6420379600e+00  3.1116720600e+00  1.1129865000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.1102254555e-01 </ixx>
+					<ixy>  3.3611787480e-02 </ixy>
+					<ixz> -1.1913985174e-02 </ixz>
+					<iyy>  1.4858670947e-01 </iyy>
+					<iyz> -4.0037693886e-03 </iyz>
+					<izz>  1.5366531031e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_middle_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.5003516250e+00 -->
+				<mass> 5.0 </mass>
+				<pose>  4.8438858000e+00  2.1230244400e+00  6.5364822000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.5162198048e+00 </ixx>
+					<ixy>  2.2819992907e+00 </ixy>
+					<ixz> -1.2230956433e+00 </ixz>
+					<iyy>  6.0647092751e+00 </iyy>
+					<iyz>  5.2541112821e-01 </iyz>
+					<izz>  6.7587161883e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_middle_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.1381828750e+00 -->
+				<mass> 4.0 </mass>
+				<pose>  7.5691284200e+00  1.0030019400e+00 -8.7934128000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  5.1136936278e+00 </ixx>
+					<ixy>  2.1973441271e-01 </ixy>
+					<ixz>  1.5570007616e+00 </ixz>
+					<iyy>  5.5117968462e+00 </iyy>
+					<iyz> -7.4217725337e-01 </iyz>
+					<izz>  7.9691961276e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_middle_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.2007783200e-03 -->
+				<mass> 0.1 </mass>
+				<pose>  7.7353796400e+00  3.9208992000e-01 -2.9732952900e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.0161446832e-03 </ixx>
+					<ixy> -1.4059416911e-03 </ixy>
+					<ixz> -1.2959110396e-03 </ixz>
+					<iyy>  3.0750605045e-03 </iyy>
+					<iyz> -9.1129347549e-04 </iyz>
+					<izz>  3.0690151962e-03 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_middle_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  3.4306478125e-01 -->
+				<mass> 2.0 </mass>
+				<pose>  8.5542059300e+00  1.0810314900e+00 -5.5927447500e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  2.6804854659e+00 </ixx>
+					<ixy> -3.5444060319e-02 </ixy>
+					<ixz>  4.3870338264e-01 </ixz>
+					<iyy>  2.7322608301e+00 </iyy>
+					<iyz>  2.4471547471e-01 </iyz>
+					<izz>  1.3451542252e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_middle_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_middle_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-middle-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- hind right leg links HRL-->
+    
+    <link name="ant_cox_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.4295720000e+00 -->
+				<mass> 3.0 </mass>
+				<pose>  1.6022424300e+00  1.8221203600e+00 -6.7805092000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  9.7229680289e-01 </ixx>
+					<ixy>  2.5368497826e-01 </ixy>
+					<ixz>  4.4356865489e-02 </ixz>
+					<iyy>  8.9010367126e-01 </iyy>
+					<iyz>  3.1340777388e-02 </iyz>
+					<izz>  1.2001971705e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_cox_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-cox-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_cox_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-cox-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_trochanter_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  7.5600100000e-01 -->
+				<mass> 1.0 </mass>
+				<pose>  2.5338972500e+00  7.3375885000e-01 -3.7215202000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.5073146623e-01 </ixx>
+					<ixy>  3.8446785123e-02 </ixy>
+					<ixz> -1.2660204418e-02 </ixz>
+					<iyy>  1.2943138858e-01 </iyy>
+					<iyz>  3.4246475864e-04 </iyz>
+					<izz>  1.6587719858e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_trochanter_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-trochanter-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_trochanter_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-trochanter-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_femur_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.0213677500e+00 -->
+				<mass> 5.0 </mass>
+				<pose>  4.4824148600e+00 -1.2080609900e+00  4.0502174000e-01 0 0 0 </pose>
+				<inertia>
+					<ixx>  6.5536969609e+00 </ixx>
+					<ixy>  5.7615280742e+00 </ixy>
+					<ixz> -1.7949181667e+00 </ixz>
+					<iyy>  6.7640387515e+00 </iyy>
+					<iyz>  1.7889443581e+00 </iyz>
+					<izz>  1.1794029899e+01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_femur_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-femur-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_femur_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-femur-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  1.3401102500e+00 -->
+				<mass> 4.0 </mass>
+				<pose>  6.9600720200e+00 -4.4782061800e+00 -1.1541235400e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  7.7173893727e+00 </ixx>
+					<ixy>  5.2720748909e-02 </ixy>
+					<ixz>  1.9881891837e-01 </ixz>
+					<iyy>  7.2343682708e+00 </iyy>
+					<iyz> -1.9348700697e+00 </iyz>
+					<izz>  7.2295283586e-01 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tibia_strip_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  2.2553488770e-03 -->
+				<mass> 0.1 </mass>
+				<pose>  7.3674939000e+00 -5.0481720000e+00 -3.7761328100e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  1.9491603305e-03 </ixx>
+					<ixy> -2.7122026856e-04 </ixy>
+					<ixz>  1.0080738747e-03 </ixz>
+					<iyy>  2.4054307874e-03 </iyy>
+					<iyz>  4.5837195408e-04 </iyz>
+					<izz>  8.4355304213e-04 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tibia_strip_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tibia-strip-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tibia_strip_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tibia-strip-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <link name="ant_tarsus_hind_right">
+    	<gravity>0</gravity>
+			<inertial>
+				<!-- Volume:  4.1799225000e-01 -->
+				<mass> 2.0 </mass>
+				<pose>  6.7083288600e+00 -6.8499987800e+00 -5.2314325000e+00 0 0 0 </pose>
+				<inertia>
+					<ixx>  3.3861289706e+00 </ixx>
+					<ixy> -7.5883129412e-02 </ixy>
+					<ixz> -9.0165040141e-02 </ixz>
+					<iyy>  1.9668560496e+00 </iyy>
+					<iyz> -1.6555281874e+00 </iyz>
+					<izz>  1.4655824647e+00 </izz>
+				</inertia>
+			</inertial>
+    	<collision name="ant_tarsus_hind_right_collision">
+      	<geometry>
+        	<mesh>
+          	<uri>model://ant/meshes/ant-tarsus-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="ant_tarsus_hind_right_visual">
+        <geometry>
+          <mesh>
+            <uri>model://ant/meshes/ant-tarsus-hind-right.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!-- joints -->
+    
+    <joint name='ant_thorax_to_head' type='fixed'>
+      <parent>ant_thorax</parent>
+      <child>ant_head</child>
+    </joint>
+    
+    <joint name='ant_thorax_to_petiole' type='fixed'>
+      <parent>ant_thorax</parent>
+      <child>ant_petiole</child>
+    </joint>
+    
+    <joint name='ant_petiole_to_node' type='fixed'>
+      <parent>ant_petiole</parent>
+      <child>ant_node</child>
+    </joint>
+    
+    <joint name='ant_node_to_gaster' type='fixed'>
+      <parent>ant_node</parent>
+      <child>ant_gaster</child>
+    </joint>
+    
+    <joint name='ant_head_to_dots' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_dots</child>
+    </joint>
+    
+    <joint name='ant_head_to_scape_bed_left' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_scape_bed_left</child>
+    </joint>
+    
+    <joint name='ant_head_to_scape_bed_right' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_scape_bed_right</child>
+    </joint>
+    
+    <joint name='ant_scape_bed_to_scape_left' type='fixed'>
+      <parent>ant_scape_bed_left</parent>
+      <child>ant_scape_left</child>
+    </joint>
+    
+    <joint name='ant_scape_bed_to_scape_right' type='fixed'>
+      <parent>ant_scape_bed_right</parent>
+      <child>ant_scape_right</child>
+    </joint>
+    
+    <joint name='ant_scape_to_flagellum_left' type='fixed'>
+      <parent>ant_scape_left</parent>
+      <child>ant_flagellum_left</child>
+    </joint>
+    
+    <joint name='ant_scape_to_flagellum_right' type='fixed'>
+      <parent>ant_scape_right</parent>
+      <child>ant_flagellum_right</child>
+    </joint>
+    
+    <joint name='ant_head_to_mandible_left' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_mandible_left</child>
+    </joint>
+    
+    <joint name='ant_head_to_mandible_right' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_mandible_right</child>
+    </joint>
+    
+    <joint name='ant_head_to_eye_left' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_eye_left</child>
+    </joint>
+    
+    <joint name='ant_head_to_eye_right' type='fixed'>
+      <parent>ant_head</parent>
+      <child>ant_eye_right</child>
+    </joint>
+    
+    <!-- legs joints description:
+    			1 - thorax to cox - revolute
+    			2 - cox to trochanter - fixed
+    			3 - trochanter to femur - fixed
+    			4 - femur to tibia - fixed
+    			5 - tibia to strip- fixed
+    			6 - tibia to tarsus - fixed -->
+    
+    <!-- front left leg joints FLLJ -->
+    
+    <joint name='FLLJ1' type='revolute'>
+      <parent>ant_thorax</parent>
+      <child>ant_cox_front_left</child>
+      <pose>-0.5 6 0.6 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+    <joint name='FLLJ2' type='fixed'>
+      <parent>ant_cox_front_left</parent>
+      <child>ant_trochanter_front_left</child>
+    </joint>
+    
+    <joint name='FLLJ3' type='fixed'>
+      <parent>ant_trochanter_front_left</parent>
+      <child>ant_femur_front_left</child>
+    </joint>
+    
+    <joint name='FLLJ4' type='fixed'>
+      <parent>ant_femur_front_left</parent>
+      <child>ant_tibia_front_left</child>
+    </joint>
+    
+    <joint name='FLLJ5' type='fixed'>
+      <parent>ant_tibia_front_left</parent>
+      <child>ant_tibia_strip_front_left</child>
+    </joint>
+    
+    <joint name='FLLJ6' type='fixed'>
+      <parent>ant_tibia_front_left</parent>
+      <child>ant_tarsus_front_left</child>
+    </joint>
+    
+    
+    <!-- middle left leg joints MLLJ -->
+    
+    <joint name='MLLJ1' type='revolute'>
+      <parent>ant_thorax</parent>
+      <child>ant_cox_middle_left</child>
+      <pose>-0.75 4 0.75 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+    <joint name='MLLJ2' type='fixed'>
+      <parent>ant_cox_middle_left</parent>
+      <child>ant_trochanter_middle_left</child>
+    </joint>
+    
+    <joint name='MLLJ3' type='fixed'>
+      <parent>ant_trochanter_middle_left</parent>
+      <child>ant_femur_middle_left</child>
+    </joint>
+    
+    <joint name='MLLJ4' type='fixed'>
+      <parent>ant_femur_middle_left</parent>
+      <child>ant_tibia_middle_left</child>
+    </joint>
+    
+    <joint name='MLLJ5' type='fixed'>
+      <parent>ant_tibia_middle_left</parent>
+      <child>ant_tibia_strip_middle_left</child>
+    </joint>
+    
+    <joint name='MLLJ6' type='fixed'>
+      <parent>ant_tibia_middle_left</parent>
+      <child>ant_tarsus_middle_left</child>
+    </joint>
+    
+    <!-- hind left leg joints HLLJ -->
+    
+    <joint name='HLLJ1' type='revolute'>
+      <parent>ant_thorax</parent>
+      <child>ant_cox_hind_left</child>
+      <pose>-1.25 2.25 0.25 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+    <joint name='HLLJ2' type='fixed'>
+      <parent>ant_cox_hind_left</parent>
+      <child>ant_trochanter_hind_left</child>
+    </joint>
+    
+    <joint name='HLLJ3' type='fixed'>
+      <parent>ant_trochanter_hind_left</parent>
+      <child>ant_femur_hind_left</child>
+    </joint>
+    
+    <joint name='HLLJ4' type='fixed'>
+      <parent>ant_femur_hind_left</parent>
+      <child>ant_tibia_hind_left</child>
+    </joint>
+    
+    <joint name='HLLJ5' type='fixed'>
+      <parent>ant_tibia_hind_left</parent>
+      <child>ant_tibia_strip_hind_left</child>
+    </joint>
+    
+    <joint name='HLLJ6' type='fixed'>
+      <parent>ant_tibia_hind_left</parent>
+      <child>ant_tarsus_hind_left</child>
+    </joint>
+    
+		<!-- front right leg joints FRLJ -->
+    
+	  <joint name='FRLJ1' type='revolute'>
+	    <parent>ant_thorax</parent>
+	    <child>ant_cox_front_right</child>
+	    <pose>0.5 6 0.6 0 -0 0</pose>
+	    <axis>
+	      <xyz>0 0 1</xyz>
+	      <limit>
+	        <lower>-0.2</lower>
+	        <upper>0.2</upper>
+	      </limit>
+	    </axis>
+	  </joint>
+    
+    <joint name='FRLJ2' type='fixed'>
+      <parent>ant_cox_front_right</parent>
+      <child>ant_trochanter_front_right</child>
+    </joint>
+    
+    <joint name='FRLJ3' type='fixed'>
+      <parent>ant_trochanter_front_right</parent>
+      <child>ant_femur_front_right</child>
+    </joint>
+    
+    <joint name='FRLJ4' type='fixed'>
+      <parent>ant_femur_front_right</parent>
+      <child>ant_tibia_front_right</child>
+    </joint>
+    
+    <joint name='FRLJ5' type='fixed'>
+      <parent>ant_tibia_front_right</parent>
+      <child>ant_tibia_strip_front_right</child>
+    </joint>
+    
+    <joint name='FRLJ6' type='fixed'>
+      <parent>ant_tibia_front_right</parent>
+      <child>ant_tarsus_front_right</child>
+    </joint>
+    
+		<!-- middle right leg joints MRLJ -->
+    
+    <joint name='MRLJ1' type='revolute'>
+      <parent>ant_thorax</parent>
+      <child>ant_cox_middle_right</child>
+      <pose>0.75 4 0.75 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+    <joint name='MRLJ2' type='fixed'>
+      <parent>ant_cox_middle_right</parent>
+      <child>ant_trochanter_middle_right</child>
+    </joint>
+    
+    <joint name='MRLJ3' type='fixed'>
+      <parent>ant_trochanter_middle_right</parent>
+      <child>ant_femur_middle_right</child>
+    </joint>
+    
+    <joint name='MRLJ4' type='fixed'>
+      <parent>ant_femur_middle_right</parent>
+      <child>ant_tibia_middle_right</child>
+    </joint>
+    
+    <joint name='MRLJ5' type='fixed'>
+      <parent>ant_tibia_middle_right</parent>
+      <child>ant_tibia_strip_middle_right</child>
+    </joint>
+    
+    <joint name='MRLJ6' type='fixed'>
+      <parent>ant_tibia_middle_right</parent>
+      <child>ant_tarsus_middle_right</child>
+    </joint>
+    
+    <!-- hind right leg joints HRLJ -->
+    
+    <joint name='HRLJ1' type='revolute'>
+      <parent>ant_thorax</parent>
+      <child>ant_cox_hind_right</child>
+      <pose>1.25 2.25 0.25 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+    <joint name='HRLJ2' type='fixed'>
+      <parent>ant_cox_hind_right</parent>
+      <child>ant_trochanter_hind_right</child>
+    </joint>
+    
+    <joint name='HRLJ3' type='fixed'>
+      <parent>ant_trochanter_hind_right</parent>
+      <child>ant_femur_hind_right</child>
+    </joint>
+    
+    <joint name='HRLJ4' type='fixed'>
+      <parent>ant_femur_hind_right</parent>
+      <child>ant_tibia_hind_right</child>
+    </joint>
+    
+    <joint name='HRLJ5' type='fixed'>
+      <parent>ant_tibia_hind_right</parent>
+      <child>ant_tibia_strip_hind_right</child>
+    </joint>
+    
+    <joint name='HRLJ6' type='fixed'>
+      <parent>ant_tibia_hind_right</parent>
+      <child>ant_tarsus_hind_right</child>
+    </joint>
+
+  </model>
+</sdf>
+
