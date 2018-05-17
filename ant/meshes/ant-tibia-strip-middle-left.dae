@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.76.0 commit date:2015-11-03, commit time:10:56, hash:f337fea</authoring_tool>
+    </contributor>
+    <created>2018-05-13T22:24:27</created>
+    <modified>2018-05-13T22:24:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Shape_052-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.3 0.3 0.3 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.12 0.088 0.04 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.175 0.3 0.3 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">103</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Shape_052-material" name="Shape_052">
+      <instance_effect url="#Shape_052-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ShapeIndexedFaceSet-mesh" name="ShapeIndexedFaceSet">
+      <mesh>
+        <source id="ShapeIndexedFaceSet-mesh-positions">
+          <float_array id="ShapeIndexedFaceSet-mesh-positions-array" count="33">0 0 0 7.91569 -2.95104 0.549496 7.96425 -2.83421 0.515817 7.73544 -3.02985 0.411126 7.49692 -3.05143 0.26054 7.486 -3.23112 0.18622 7.93723 -2.95608 0.501144 7.98423 -2.74371 0.533564 7.48374 -3.11426 0.17651 7.9666 -2.75373 0.591066 7.43685 -3.20294 0.218858</float_array>
+          <technique_common>
+            <accessor source="#ShapeIndexedFaceSet-mesh-positions-array" count="11" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ShapeIndexedFaceSet-mesh-normals">
+          <float_array id="ShapeIndexedFaceSet-mesh-normals-array" count="48">0.8760623 -0.2442829 0.4157413 0.6894412 -0.04672795 -0.7228329 0.009033799 -0.7501065 0.6612555 -0.5282493 0.8489735 -0.01402622 -0.5323097 -0.0217666 0.84627 0.589459 -0.03352481 -0.8071025 0.36541 -0.929053 -0.05775904 -0.5823248 -0.07849621 -0.8091577 0.5614768 0.0381416 -0.826613 -0.4849092 -0.3199809 0.8139259 -0.5630204 -0.0287429 0.825943 -0.9021277 0.4012842 -0.1585459 0.9109187 -0.2956621 0.2877693 0.9361746 -0.2542912 0.2427201 0.2514614 -0.944701 0.210493 -0.1865673 0.8006328 -0.5693679</float_array>
+          <technique_common>
+            <accessor source="#ShapeIndexedFaceSet-mesh-normals-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ShapeIndexedFaceSet-mesh-vertices">
+          <input semantic="POSITION" source="#ShapeIndexedFaceSet-mesh-positions"/>
+        </vertices>
+        <polylist material="Shape_052-material" count="16">
+          <input semantic="VERTEX" source="#ShapeIndexedFaceSet-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ShapeIndexedFaceSet-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>6 0 2 0 1 0 3 1 5 1 8 1 3 2 10 2 5 2 4 3 9 3 7 3 3 4 4 4 10 4 6 5 8 5 2 5 6 6 3 6 8 6 8 7 5 7 10 7 8 8 7 8 2 8 4 9 3 9 1 9 4 10 1 10 9 10 10 11 4 11 8 11 9 12 1 12 2 12 9 13 2 13 7 13 1 14 3 14 6 14 7 15 8 15 4 15</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="ant-tibia-strip-middle-left" name="ant-tibia-strip-middle-left" type="NODE">
+        <matrix sid="transform">-1 -1.4243e-14 -8.74228e-8 0 -8.74228e-8 1.62921e-7 1 0 0 1 -1.62921e-7 0 0 0 0 1</matrix>
+        <instance_geometry url="#ShapeIndexedFaceSet-mesh" name="ant-tibia-strip-middle-left">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Shape_052-material" target="#Shape_052-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
