@@ -1,5 +1,5 @@
 # ant_simulation
-Diploma thesis - Ant simulation
+Master thesis - Ant simulation
 
 The goal is to plausibly simulate and control a walking ant.
 Implemented using Gazebo 9, ROS and catkin.
