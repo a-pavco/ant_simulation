@@ -41,6 +41,8 @@ namespace gazebo
       this->model->GetJointController()->SetPositionPID(this->jointMR->GetScopedName(), this->pidMR);
       this->model->GetJointController()->SetPositionPID(this->jointHR->GetScopedName(), this->pidHR);
 
+      this->leftTripod = true;
+
       this->SetJointPositions(100.0);
          
 
@@ -82,14 +84,21 @@ namespace gazebo
     
     public: void SetJointPositions(const double &_position) 
     {
-    	ROS_WARN("Setting joints poses.");
-    	this->model->GetJointController()->SetPositionTarget(this->jointFL->GetScopedName(), _position);
-    	//this->model->GetJointController()->SetPositionTarget(this->jointML->GetScopedName(), _position);
-    	//this->model->GetJointController()->SetPositionTarget(this->jointHL->GetScopedName(), _position);
-    	this->model->GetJointController()->SetPositionTarget(this->jointFR->GetScopedName(), _position);
-    	//this->model->GetJointController()->SetPositionTarget(this->jointMR->GetScopedName(), _position);
-    	//this->model->GetJointController()->SetPositionTarget(this->jointHR->GetScopedName(), _position);
-    	ROS_WARN("End setting joints poses.");
+      if (leftTripod) {
+        ROS_WARN("Setting left tripod joints poses.");
+        this->model->GetJointController()->SetPositionTarget(this->jointFL->GetScopedName(), _position);
+        this->model->GetJointController()->SetPositionTarget(this->jointMR->GetScopedName(), -_position);
+        this->model->GetJointController()->SetPositionTarget(this->jointHL->GetScopedName(), _position);
+        leftTripod = false;
+      }
+      else {
+        ROS_WARN("Setting right tripod joints poses.");
+        this->model->GetJointController()->SetPositionTarget(this->jointML->GetScopedName(), _position);
+        this->model->GetJointController()->SetPositionTarget(this->jointFR->GetScopedName(), -_position);
+        this->model->GetJointController()->SetPositionTarget(this->jointHR->GetScopedName(), -_position);
+        leftTripod = true;
+      }
+    	
     }
     
      
@@ -128,7 +137,7 @@ namespace gazebo
     private: std::thread rosQueueThread;
 
     /// \brief Pointer to the joints.
-	private: physics::JointPtr jointFL;
+	 private: physics::JointPtr jointFL;
 	private: physics::JointPtr jointML;
 	private: physics::JointPtr jointHL;
 	private: physics::JointPtr jointFR;
@@ -141,6 +150,8 @@ namespace gazebo
 	private: common::PID pidFR;
 	private: common::PID pidMR;
 	private: common::PID pidHR;
+
+  bool leftTripod;
     
   };
 
