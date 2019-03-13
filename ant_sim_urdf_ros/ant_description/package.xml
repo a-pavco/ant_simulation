@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>ant_description</name>
+  <version>0.0.0</version>
+  <description>The ant_description package</description>
+
+  <license>MIT</license>
+  <author email="ado.pavco@gmail.com">Adrian Pavco</author>
+  <maintainer email="ado.pavco@gmail.com">Adrian Pavco</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+
+  <export>
+  </export>
+</package>

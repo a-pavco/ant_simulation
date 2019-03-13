@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<robot name="ant"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="base_link"/>
+
+  <joint name="ant_attachment" type="fixed">
+    <parent link="base_link"/>
+    <child link="thorax"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- thorax link -->
+  <link name="thorax">
+    <collision>
+      <origin xyz="0.02495771 4.745264 0.9420236" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/thorax.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.02495771 4.745264 0.9420236" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/thorax.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-0.04847949 5.0895386 1.30014761" rpy="0 0 0"/>
+      <mass value="40"/>
+      <inertia
+        ixx="2.1574865398e+02" 
+        ixy="-1.5499513134e-01" 
+        ixz="-4.3375096425e-02"
+        iyy="5.3331719151e+01" 
+        iyz="-1.7571679462e+01"
+        izz="2.2341557491e+02"/>
+    </inertial>
+  </link> 
+   
+</robot>

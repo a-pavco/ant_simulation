@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<robot name="ant"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <material name="black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+
+  <material name="grey">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+
+  <material name="brown">
+    <color rgba="${222/255} ${207/255} ${195/255} 1.0"/>
+  </material>
+  
+  <link name="base_link"/>
+
+  <joint name="ant_attachment" type="fixed">
+    <parent link="base_link"/>
+    <child link="thorax"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- thorax link -->
+  <link name="thorax">
+    <collision>
+      <origin xyz="0.02495771 4.745264 0.9420236" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/thorax.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.02495771 4.745264 0.9420236" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/thorax.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-0.04847949 5.0895386 1.30014761" rpy="0 0 0"/>
+      <mass value="40"/>
+      <inertia
+        ixx="2.1574865398e+02" 
+        ixy="-1.5499513134e-01" 
+        ixz="-4.3375096425e-02"
+        iyy="5.3331719151e+01" 
+        iyz="-1.7571679462e+01"
+        izz="2.2341557491e+02"/>
+    </inertial>
+  </link> 
+
+  <!-- head link -->
+  <link name="head">
+    <collision>
+      <origin xyz="8.69815e-4 11.79549 -0.03817248" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/head.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="8.69815e-4 11.79549 -0.03817248" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/head.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.001631625 11.33051132 0.00357429" rpy="0 0 0"/> 
+      <mass value="30"/>
+      <inertia
+        ixx="6.1372709332e+01" 
+        ixy="-2.4209532812e-02" 
+        ixz="-2.7104785800e-04"
+        iyy="6.3649281062e+01" 
+        iyz="7.1256139380e+00"
+        izz="8.1137643143e+01"/>
+    </inertial>
+  </link>  
+  
+  <joint name="thorax_head" type="fixed">
+    <parent link="thorax"/>
+    <child link="head"/>
+  </joint>  
+
+  <!-- petiole link -->
+  <link name="petiole">
+    <collision>
+      <origin xyz="0.01740854 0.07322531 0.2697668" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/petiole.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.01740854 0.07322531 0.2697668" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/petiole.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.00561879 0.00296973 0.28649062" rpy="0 0 0"/> 
+      <mass value="5"/>
+      <inertia
+        ixx="2.7897944003e+00" 
+        ixy="3.5781084256e-03" 
+        ixz="-3.2402220006e-03"
+        iyy="2.5550380430e+00" 
+        iyz="-4.0086618959e-01"
+        izz="2.0464923935e+00"/>
+    </inertial>
+  </link>  
+  
+  <joint name="thorax_petiole" type="fixed">
+    <parent link="thorax"/>
+    <child link="petiole"/>
+  </joint> 
+
+  <!-- node link --> 
+  <link name="node">
+    <collision>
+      <origin xyz="-0.006898105 -1.105468 -0.2202131" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/node.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.006898105 -1.105468 -0.2202131" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/node.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-0.011776415 -1.10854547 -0.22971905" rpy="0 0 0"/> 
+      <mass value="2"/>
+      <inertia
+        ixx="3.5458615208e-01" 
+        ixy="-4.6808282018e-04" 
+        ixz="2.2591796230e-03"
+        iyy="2.1462833835e-01" 
+        iyz="-6.3565631669e-04"
+        izz="3.8425372799e-01"/>
+    </inertial>
+  </link>  
+
+  <joint name="petiole_node" type="fixed">
+    <parent link="petiole"/>
+    <child link="node"/>
+  </joint> 
+
+  <!-- gaster link --> 
+  <link name="gaster">
+    <collision>
+      <origin xyz="-0.003080308 -4.342331 -1.633749" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/gaster.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-0.003080308 -4.342331 -1.633749" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/gaster.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-0.007536868 -4.24358572 -1.27920505" rpy="0 0 0"/> 
+      <mass value="35"/>  CHANGED to 35 from 50
+      <inertia
+        ixx="1.5049922562e+02" 
+        ixy="3.3508063294e-03" 
+        ixz="1.7003903286e-02"
+        iyy="1.1459202296e+02" 
+        iyz="-2.2113997039e+01"
+        izz="1.5439307293e+02"/>
+    </inertial>
+  </link>  
+
+  <joint name="node_gaster" type="fixed">
+    <parent link="node"/>
+    <child link="gaster"/>
+  </joint> 
+
+  <!-- cox front left link -->
+  <link name="cox_f_l">
+    <collision>
+      <origin xyz="-1.172313 5.942684 -0.2417362" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_l.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-1.172313 5.942684 -0.2417362" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_l.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-1.15996349 5.95925035 -0.39708631" rpy="0 0 0"/> 
+      <mass value="3"/>
+      <inertia
+        ixx="7.5768846297e-01" 
+        ixy="1.7005788603e-01" 
+        ixz="5.7852710942e-03"
+        iyy="1.1727972097e+00" 
+        iyz="5.6909853774e-02"
+        izz="1.2224152912e+00"/>
+    </inertial>
+  </link>  
+
+  <joint name="thorax_cox_f_l" type="fixed">
+    <parent link="thorax"/>
+    <child link="cox_f_l"/>
+  </joint> 
+
+  <!-- trochanter front left link -->
+  <link name="trochanter_f_l">
+    <collision>
+      <origin xyz="-2.528082 6.396783 -0.2241104" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/trochanter_f_l.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="-2.528082 6.396783 -0.2241104" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/trochanter_f_l.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-2.49851683 6.36395995 -0.21917079" rpy="0 0 0"/> 
+      <mass value="1"/>
+      <inertia
+        ixx="1.1496440267e-01" 
+        ixy="3.4858491007e-02" 
+        ixz="1.4360769641e-03"
+        iyy="1.4220481517e-01" 
+        iyz="-1.1846910889e-02"
+        izz="1.5255737899e-01"/>
+    </inertial>
+  </link> 
+
+  <joint name="cox_trochanter_f_l" type="fixed">
+    <parent link="cox_f_l"/>
+    <child link="trochanter_f_l"/>
+  </joint>  
+
+  <!-- cox front right link -->
+  <link name="cox_f_r">
+    <collision>
+      <origin xyz="1.172313 5.942684 -0.2417362" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="1.172313 5.942684 -0.2417362" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="1.25136602 5.99381263 -0.37225504" rpy="0 0 0"/> 
+      <mass value="3"/>
+      <inertia
+        ixx="7.5656651420e-01" 
+        ixy="-1.6078972639e-01" 
+        ixz="2.2975131314e-02"
+        iyy="1.1275039835e+00" 
+        iyz="5.7195192991e-02"
+        izz="1.1844327222e+00"/>
+    </inertial>
+  </link>  
+
+  <joint name="thorax_cox_f_r" type="fixed">
+    <parent link="thorax"/>
+    <child link="cox_f_r"/>
+  </joint>  
+
+
+
+  <!--<gazebo reference="gaster">    
+    <material>Gazebo/Blue</material>
+  </gazebo> -->
+
+  <gazebo>
+    <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">
+      <robotNamespace>/ant</robotNamespace>
+    </plugin>
+  </gazebo>
+  
+</robot>

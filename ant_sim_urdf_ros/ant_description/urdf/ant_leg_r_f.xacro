@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<robot name="ant"  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- cox front right link -->
+  <link name="cox_f_r">
+    <collision>
+      <origin xyz="0.5 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.5 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/cox_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.57905302  5.1128630000e-02 -1.3051884000e-01" rpy="0 0 0"/> 
+      <mass value="3"/>
+      <inertia
+        ixx="7.5656651420e-01" 
+        ixy="-1.6078972639e-01" 
+        ixz="2.2975131314e-02"
+        iyy="1.1275039835e+00" 
+        iyz="5.7195192991e-02"
+        izz="1.1844327222e+00"/>
+    </inertial>
+  </link>  
+
+  <joint name="thorax_cox_f_r" type="revolute">
+    <parent link="thorax"/>
+    <child link="cox_f_r"/>
+    <origin xyz="0.69727071 5.942684 -0.2417362" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="${j_eff}" velocity="${j_vel}" lower="${r_1_low}}" upper="${r_1_upp}"/>
+  </joint>
+
+  <!-- trochanter front right link -->
+  <link name="trochanter_f_r">
+    <collision>
+      <origin xyz="0.6 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/trochanter_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0.6 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/trochanter_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.538491 -5.1388720000e-02 -1.3824200000e-02" rpy="0 0 0"/> 
+      <mass value="1"/>
+      <inertia
+        ixx="1.0497057613e-01" 
+        ixy="-3.6631126790e-02" 
+        ixz="-3.9228430044e-03"
+        iyy="1.4323023665e-01" 
+        iyz="-2.1808929210e-02"
+        izz="1.5518180277e-01"/>
+    </inertial>
+  </link>  
+
+  <joint name="cox_trochanter_f_r" type="revolute">
+    <parent link="cox_f_r"/>
+    <child link="trochanter_f_r"/>
+    <origin xyz="1.59727071 0.454099 0.0176258" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="-1" upper="0" />
+  </joint> 
+
+  <!-- femur front right link -->
+  <link name="femur_f_r">
+    <collision>
+      <origin xyz="1.949923 1.783526 0.32062271" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/femur_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="1.949923 1.783526 0.32062271" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/femur_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="0.58560998 -5.2536510000e-02  3.3790940000e-02" rpy="0 0 0"/> 
+      <mass value="5"/>
+      <inertia
+        ixx="3.5605818097e+00" 
+        ixy="-2.1346250176e+00" 
+        ixz="-4.1254699156e-01"
+        iyy="1.8632358937e+00" 
+        iyz="-5.6765821955e-01"
+        izz="4.9254199566e+00"/>
+    </inertial>
+  </link> 
+
+  <joint name="trochanter_femur_f_r" type="fixed">
+    <parent link="trochanter_f_r"/>
+    <child link="femur_f_r"/>
+  </joint>  
+
+  <!-- tibia front right link -->
+  <link name="tibia_f_r">
+    <collision>
+      <origin xyz="0 0 -1.3" rpy="0 0 0.523599"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/tibia_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 -1.3" rpy="0 0 0.523599"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/tibia_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="4.1651520000e-02 -5.6355840000e-02 -1.77705898" rpy="0 0 0.523599"/> 
+      <mass value="4"/>
+      <inertia
+        ixx="5.5697936408e+00" 
+        ixy="8.9994538190e-02" 
+        ixz="4.0634984476e-01"
+        iyy="5.4089508408e+00" 
+        iyz="-9.4506940495e-01"
+        izz="3.7695625536e-01"/>
+    </inertial>
+  </link>  
+
+  <joint name="femur_tibia_f_r" type="revolute">
+    <parent link="femur_f_r"/>
+    <child link="tibia_f_r"/>
+    <origin xyz="3.067233 2.99855 0.2249814" rpy="0 0 -0.523599" />
+    <axis xyz="1 0 0" />
+    <limit effort="2.8" velocity="5.6548668" lower="0" upper="1" />
+  </joint> 
+
+ <!-- tarsus front right link -->
+  <link name="tarsus_f_r">
+    <collision>
+      <origin xyz="1.164141 1.274724 -5.899937" rpy="0 0 0.523599"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/tarsus_f_r.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="1.164141 1.274724 -5.899937" rpy="0 0 0.523599"/>
+      <geometry>
+        <mesh filename="package://ant_description/meshes/tarsus_f_r.stl"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <origin xyz="-0.201113 -0.34006 -0.916733" rpy="0 0 0.523599"/>
+      <mass value="2"/>
+      <inertia
+        ixx="2.0264224199e+00" 
+        ixy="-5.0324785226e-01" 
+        ixz="1.2654551473e+00"
+        iyy="2.7097661696e+00" 
+        iyz="6.5752556549e-01"
+        izz="1.2447538164e+00"/>
+    </inertial>
+  </link> 
+
+  <joint name="tibia_tarsus_f_r" type="fixed">
+    <parent link="tibia_f_r"/>
+    <child link="tarsus_f_r"/>
+  </joint>
+  
+</robot>

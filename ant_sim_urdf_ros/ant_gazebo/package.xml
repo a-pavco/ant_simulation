@@ -1,0 +1,25 @@
+<package>
+  <name>ant_gazebo</name>
+  <version>0.1.0</version>
+  <description>ant_gazebo package</description>
+
+  <license>MIT</license>
+  <author email="ado.pavco@gmail.com">Adrian Pavco</author>
+  <maintainer email="ado.pavco@gmail.com">Adrian Pavco</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>gazebo_ros_control</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>xacro</run_depend>
+  <run_depend>ant_control</run_depend>
+  <run_depend>ant_description</run_depend>
+  
+</package>
