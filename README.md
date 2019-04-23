@@ -4,6 +4,8 @@ Master thesis - Ant simulation
 The goal is to plausibly simulate a walking ant.
 Implemented using Gazebo 9 and ROS Melodic Morenia.
 
+status: 4/2019 - key control, enviroment, finishing document
+
 status: 3/2019 - simulation using Gazebo ROS
 
 status: 2/2019 - building URDF model of an ant for purposes of ROS control
