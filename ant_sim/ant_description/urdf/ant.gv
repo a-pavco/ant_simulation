@@ -1,0 +1,134 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"thorax" [label="thorax"];
+"cox_f_l" [label="cox_f_l"];
+"trochanter_f_l" [label="trochanter_f_l"];
+"femur_f_l" [label="femur_f_l"];
+"tibia_f_l" [label="tibia_f_l"];
+"tarsus_f_l" [label="tarsus_f_l"];
+"cox_f_r" [label="cox_f_r"];
+"trochanter_f_r" [label="trochanter_f_r"];
+"femur_f_r" [label="femur_f_r"];
+"tibia_f_r" [label="tibia_f_r"];
+"tarsus_f_r" [label="tarsus_f_r"];
+"cox_m_l" [label="cox_m_l"];
+"trochanter_m_l" [label="trochanter_m_l"];
+"femur_m_l" [label="femur_m_l"];
+"tibia_m_l" [label="tibia_m_l"];
+"tarsus_m_l" [label="tarsus_m_l"];
+"cox_m_r" [label="cox_m_r"];
+"trochanter_m_r" [label="trochanter_m_r"];
+"femur_m_r" [label="femur_m_r"];
+"tibia_m_r" [label="tibia_m_r"];
+"tarsus_m_r" [label="tarsus_m_r"];
+"cox_r_l" [label="cox_r_l"];
+"trochanter_r_l" [label="trochanter_r_l"];
+"femur_r_l" [label="femur_r_l"];
+"tibia_r_l" [label="tibia_r_l"];
+"tarsus_r_l" [label="tarsus_r_l"];
+"cox_r_r" [label="cox_r_r"];
+"trochanter_r_r" [label="trochanter_r_r"];
+"femur_r_r" [label="femur_r_r"];
+"tibia_r_r" [label="tibia_r_r"];
+"tarsus_r_r" [label="tarsus_r_r"];
+"head" [label="head"];
+"eye_l" [label="eye_l"];
+"eye_r" [label="eye_r"];
+"mandible_l" [label="mandible_l"];
+"mandible_r" [label="mandible_r"];
+"scape_l" [label="scape_l"];
+"flagellum_l" [label="flagellum_l"];
+"scape_r" [label="scape_r"];
+"flagellum_r" [label="flagellum_r"];
+"petiole" [label="petiole"];
+"node" [label="node"];
+"gaster" [label="gaster"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "ant_attachment" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"ant_attachment" -> "thorax"
+"thorax" -> "j_1_f_l" [label="xyz: -0.672313 5.94268 -0.241736 \nrpy: 0 -0 0"]
+"j_1_f_l" -> "cox_f_l"
+"cox_f_l" -> "j_2_f_l" [label="xyz: -1.26577 0.454099 0.0176258 \nrpy: 0 0 -0.523599"]
+"j_2_f_l" -> "trochanter_f_l"
+"trochanter_f_l" -> "trochanter_femur_f_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_f_l" -> "femur_f_l"
+"femur_f_l" -> "j_3_f_l" [label="xyz: -4.15558 1.0632 0.224981 \nrpy: 0 -0 1.0472"]
+"j_3_f_l" -> "tibia_f_l"
+"tibia_f_l" -> "tibia_tarsus_f_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_f_l" -> "tarsus_f_l"
+"thorax" -> "j_1_f_r" [label="xyz: 0.697271 5.94268 -0.241736 \nrpy: 0 -0 0"]
+"j_1_f_r" -> "cox_f_r"
+"cox_f_r" -> "j_2_f_r" [label="xyz: 1.26577 0.454099 0.0176258 \nrpy: 0 -0 0.523599"]
+"j_2_f_r" -> "trochanter_f_r"
+"trochanter_f_r" -> "trochanter_femur_f_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_f_r" -> "femur_f_r"
+"femur_f_r" -> "j_3_f_r" [label="xyz: 4.15558 1.0632 0.224981 \nrpy: 0 0 -1.0472"]
+"j_3_f_r" -> "tibia_f_r"
+"tibia_f_r" -> "tibia_tarsus_f_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_f_r" -> "tarsus_f_r"
+"thorax" -> "j_1_m_l" [label="xyz: -0.873203 3.65433 -0.0440231 \nrpy: 0 -0 0"]
+"j_1_m_l" -> "cox_m_l"
+"cox_m_l" -> "j_2_m_l" [label="xyz: -1.09279 -0.667436 0.158479 \nrpy: 0 -0 0"]
+"j_2_m_l" -> "trochanter_m_l"
+"trochanter_m_l" -> "trochanter_femur_m_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_m_l" -> "femur_m_l"
+"femur_m_l" -> "j_3_m_l" [label="xyz: -4.79443 -1.92348 0.812101 \nrpy: 0 -0 1.91986"]
+"j_3_m_l" -> "tibia_m_l"
+"tibia_m_l" -> "tibia_tarsus_m_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_m_l" -> "tarsus_m_l"
+"thorax" -> "j_1_m_r" [label="xyz: 0.873203 3.65433 -0.0440231 \nrpy: 0 -0 0"]
+"j_1_m_r" -> "cox_m_r"
+"cox_m_r" -> "j_2_m_r" [label="xyz: 1.09279 -0.667436 0.158479 \nrpy: 0 -0 0"]
+"j_2_m_r" -> "trochanter_m_r"
+"trochanter_m_r" -> "trochanter_femur_m_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_m_r" -> "femur_m_r"
+"femur_m_r" -> "j_3_m_r" [label="xyz: 4.79443 -1.92348 0.812101 \nrpy: 0 0 -1.91986"]
+"j_3_m_r" -> "tibia_m_r"
+"tibia_m_r" -> "tibia_tarsus_m_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_m_r" -> "tarsus_m_r"
+"thorax" -> "j_1_r_l" [label="xyz: -1.00466 2.31051 -0.468762 \nrpy: 0 -0 0"]
+"j_1_r_l" -> "cox_r_l"
+"cox_r_l" -> "j_2_r_l" [label="xyz: -1.45595 -1.52183 0.11983 \nrpy: 0 -0 0.785398"]
+"j_2_r_l" -> "trochanter_r_l"
+"trochanter_r_l" -> "trochanter_femur_r_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_r_l" -> "femur_r_l"
+"femur_r_l" -> "j_3_r_l" [label="xyz: -6.64225 -0.535843 1.32385 \nrpy: 0 -0 1.5708"]
+"j_3_r_l" -> "tibia_r_l"
+"tibia_r_l" -> "tibia_tarsus_r_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_r_l" -> "tarsus_r_l"
+"thorax" -> "j_1_r_r" [label="xyz: 0.996461 2.34668 -0.501844 \nrpy: 0 -0 0"]
+"j_1_r_r" -> "cox_r_r"
+"cox_r_r" -> "j_2_r_r" [label="xyz: 1.45595 -1.52183 0.11983 \nrpy: 0 0 -0.785398"]
+"j_2_r_r" -> "trochanter_r_r"
+"trochanter_r_r" -> "trochanter_femur_r_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"trochanter_femur_r_r" -> "femur_r_r"
+"femur_r_r" -> "j_3_r_r" [label="xyz: 6.64225 -0.535843 1.32385 \nrpy: 0 0 -1.5708"]
+"j_3_r_r" -> "tibia_r_r"
+"tibia_r_r" -> "tibia_tarsus_r_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"tibia_tarsus_r_r" -> "tarsus_r_r"
+"thorax" -> "thorax_head" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"thorax_head" -> "head"
+"head" -> "head_eye_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_eye_l" -> "eye_l"
+"head" -> "head_eye_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_eye_r" -> "eye_r"
+"head" -> "head_mandible_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_mandible_l" -> "mandible_l"
+"head" -> "head_mandible_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_mandible_r" -> "mandible_r"
+"head" -> "head_scape_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_scape_l" -> "scape_l"
+"scape_l" -> "scape_flagellum_l" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"scape_flagellum_l" -> "flagellum_l"
+"head" -> "head_scape_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"head_scape_r" -> "scape_r"
+"scape_r" -> "scape_flagellum_r" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"scape_flagellum_r" -> "flagellum_r"
+"thorax" -> "thorax_petiole" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"thorax_petiole" -> "petiole"
+"petiole" -> "petiole_node" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"petiole_node" -> "node"
+"node" -> "node_gaster" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"node_gaster" -> "gaster"
+}

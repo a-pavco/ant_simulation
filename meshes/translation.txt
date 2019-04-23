@@ -1,0 +1,124 @@
+from dae centered coords: x, -z, -y
+
+
+head: 8.69815e-4 11.79549 -0.03817248
+petiole: 0.01740854 0.07322531 0.2697668
+node: -0.006898105 -1.105468 -0.2202131
+gaster: -0.003080308 -4.342331 -1.633749
+thorax: -0.02495771 4.745264 0.9420236
+eye l: -2.086435 11.59313 0.2650509
+eye r: 2.086435 11.59313 0.2650509
+dots and beds: 
+merged to head, simplicity purposes 
+0.002466619 10.66121 1.925843 
+mandible l: -0.7011991 14.09823 -1.611525 
+mandible r: 0.6943221 14.09485 -1.611031 
+scape l: -0.7057881 12.91887 2.897474
+scape r: 0.7057881 12.91887 2.897474
+flagellum l: -1.797092 16.61842 6.703302 
+flagellum r: 1.797092 16.61842 6.703302 
+
+
+cox f l: -1.172313 5.942684 -0.2417362
+trochanter f l: -2.528082 6.396783 -0.2241104
+femur f l: -3.878005 8.180309 0.09651231 
+tibia f l: -4.995315 9.395333 -1.299129 
+tarsus f l: -6.640853 9.917206 -5.899066  
+
+cox f r: 1.172313 5.942684 -0.2417362
+trochanter f r: 2.528082 6.396783 -0.2241104
+femur f r: 3.878005 8.180309 0.09651231 
+tibia f r: 4.995315 9.395333 -1.299129 
+tarsus f r: 6.640853 9.917206 -5.899066
+
+cox m l: -1.398161 3.654325 -0.04402315 
+trochanter m l: -2.590947 2.986889 0.1144554
+femur m l: -5.022743 1.949712 0.7019378  
+tibia m l: -7.185379 1.063412 -0.3734437
+tarsus m l: -8.444602 1.052132 -5.57509
+
+cox m r: 1.398161 3.654325 -0.04402315 
+trochanter m r: 2.590947 2.986889 0.1144554
+femur m r: 5.022743 1.949712 0.7019378 !! 
+tibia m r: 7.185379 1.063412 -0.3734437
+tarsus m r: 8.390748 0.9942203 -5.253712
+
+cox r l: -1.504655 1.810507 -0.4687623 
+trochanter r l: -2.460619 0.6886729 -0.3489326
+femur r l: -4.930989 -1.800083 0.5095381  
+tibia r l: -6.778499 -4.287002 -0.8250852 
+tarsus r l: -6.730211 -6.488528 -4.912447  
+
+cox r r: 1.496461 1.846683 -0.5018439 
+trochanter r r: 2.460619 0.6886729 -0.3489326
+femur r r: 4.930989 -1.800083 0.5095381
+tibia r r: 6.778499 -4.287002 -0.8250852
+tarsus r r: 6.730211 -6.488528 -4.912447
+
+JOINTS outdated:
+
+front legs:
+thorax -> cox: x = 0.5
+cox -> trochanter: x = 0.1
+femur -> tibia: z = 1.3 rpy: y = 0.523599
+
+middle legs:
+thorax -> cox: x = 0.5
+cox -> trochanter: x = 0.1
+femur -> tibia: z = 1.3 x = 0.4 rpy: y = 1.91986
+
+rear legs:
+thorax -> cox: x = 0.5 y = 0.5
+cox -> trochanter: x = 0.5
+femur -> tibia: z = 1.3 x = 0.4 rpy: y = 1.91986
+
+troch r l x 0.5  y 0.1  rad 0.785398
+
+updated weight:
+head tot: 5.22
+thorax: 3.9
+gaster tot: 11.3
+front l ot: 0.3
+middle l tot: 0.25
+rear l tot: 0.35
+as follows:
+
+thorax: 3.9
+
+head: 4.9
+eye_l: 0.01
+eye_r: 0.01
+mandible l: 0.05
+mandible r: 0.05
+scape l: 0.05
+scape r: 0.05
+flagellum l: 0.05
+flagellum r: 0.05
+
+petiole: 0.4
+node: 0.4
+gaster: 10.5
+
+0.3
+cox f: 0.04
+trochanter f: 0.02
+femur f: 0.1
+tibia f: 0.1
+tarsus f: 0.04
+
+0.25
+cox m: 0.04
+trochanter m: 0.02
+femur m: 0.075
+tibia m: 0.075
+tarsus m: 0.04
+
+0.35
+cox r: 0.04
+trochanter r: 0.02
+femur r: 0.125
+tibia r: 0.125
+tarsus r: 0.04
+
+v urdf hmotnost 1e-3 kvoli konverzii mg, kg, mravec mm a m
+

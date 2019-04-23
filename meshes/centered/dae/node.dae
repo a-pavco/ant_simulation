@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.79.0</authoring_tool>
+    </contributor>
+    <created>2019-02-06T17:06:27</created>
+    <modified>2019-02-06T17:06:27</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_effects>
+    <effect id="Shape_028-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.096 0.16 0.144 1</color>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.08750001 0.15 0.15 1</color>
+            </specular>
+            <shininess>
+              <float sid="shininess">103</float>
+            </shininess>
+            <index_of_refraction>
+              <float sid="index_of_refraction">1</float>
+            </index_of_refraction>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Shape_028-material" name="Shape_028">
+      <instance_effect url="#Shape_028-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ShapeIndexedFaceSet_001-mesh" name="ShapeIndexedFaceSet.001">
+      <mesh>
+        <source id="ShapeIndexedFaceSet_001-mesh-positions">
+          <float_array id="ShapeIndexedFaceSet_001-mesh-positions-array" count="90">0.006898105 0.2202131 1.105468 -0.05375111 -0.1491768 -0.8057116 0.3136911 -0.3891269 0.4745583 -0.1368389 0.0330531 -0.8011817 0.3155771 0.391383 0.3235303 -0.3194949 0.3793841 0.3226103 -0.3017939 -0.4307559 0.3234993 0.03706187 0.1167761 -0.8030517 0.1608731 -0.03590685 -0.8054617 -0.5590218 -0.03624784 0.3173933 0.5728192 -0.003031849 0.3173923 0.4946671 -0.1503809 -0.5530816 -0.4808698 0.1110672 -0.5530816 -0.05791962 -0.4661979 -0.5657717 0.5513992 0.06393408 -0.3635517 0.07176131 0.4268201 -0.5657717 -0.5376008 -0.1032499 -0.3635517 0.2079331 -0.1225279 0.6839403 0.4562641 -0.09874486 0.5332303 0.2894501 -0.4096479 -0.5434517 0.3615081 0.3171684 -0.5592017 -0.2756069 0.3702941 -0.5434316 -0.3476918 -0.3565629 -0.5592117 0.3270781 0.2778798 0.5436213 -0.03899079 0.1845263 0.6820953 -0.1802718 -0.1304368 0.6794863 -0.3656969 0.2101134 0.5386183 -0.4292759 -0.1778959 0.5350783 -0.02736848 -0.4609669 0.5027483 -0.05478829 0.4182451 0.5022473</float_array>
+          <technique_common>
+            <accessor source="#ShapeIndexedFaceSet_001-mesh-positions-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ShapeIndexedFaceSet_001-mesh-normals">
+          <float_array id="ShapeIndexedFaceSet_001-mesh-normals-array" count="162">0.2897687 0.2385929 0.9268805 -0.292295 0.5707276 0.767355 0.8167392 0.529105 0.2301853 -0.4438316 0.7489736 0.491988 -0.8299567 -0.5389215 0.1439988 -0.2385482 -0.5840755 -0.7758548 -0.4731185 0.4037771 -0.7830218 0.2350135 0.5740078 -0.7844002 0.4634072 -0.3962399 -0.792621 -0.005017638 0.01171392 -0.9999188 0.1396135 0.6097848 0.7801735 -0.01862537 0.01635837 -0.9996927 -0.5110223 0.07592409 0.8562078 -0.3856595 0.1654742 0.9076812 -0.8376498 -0.5462028 -0.002354025 -5.06705e-4 -0.4717157 0.8817505 -0.7860552 -0.6171076 0.03599303 0.8375771 0.5463142 -0.002349197 0.2700378 0.8614301 0.4301372 0.7859979 0.617182 0.0359708 0.8336685 -0.5519525 0.01858383 -0.8130596 0.1280459 0.5679246 0.7839728 -0.6207647 -0.006154716 -0.8664376 0.4992404 0.006699562 -0.601045 -0.1609115 -0.782849 -0.5301778 -0.2213883 -0.8184733 -0.149469 0.6114212 -0.7770606 -0.7823115 0.6211744 -0.04616469 0.6307313 0.169722 -0.7572136 0.79743 0.2584826 0.5452451 0.1479755 -0.5980866 -0.7876521 0.1848071 -0.5606321 0.8071791 0.5025777 0.1488931 0.8516141 -0.8300269 -0.2297239 -0.5082151 0.50295 -0.4015818 0.7653584 -0.3332672 -0.5598217 0.7586387 0.8479418 -0.4670017 0.2508074 0.8300147 0.2297372 -0.508229 -0.849985 0.4873314 0.2000845 -0.4448261 -0.6959528 0.5637194 -0.3544183 -0.9331598 -0.06000471 -0.1146765 -0.9933696 0.008141994 -0.9757658 0.2126424 -0.05161845 -0.2579049 0.5174697 -0.8159108 0.3544945 0.9331308 -0.06000643 0.08075904 0.9965788 0.01757049 0.9757629 -0.2126585 -0.05160731 0.4151024 0.3498635 -0.8398128 0.1606647 -0.9870091 2.38305e-4 0.207262 -0.9781738 0.01478254 0.2608329 -0.4923946 -0.8303698 -0.01140803 -0.003165721 0.9999299 -0.1613048 0.9868413 -0.01118975 -0.1338064 0.9908586 -0.01718086</float_array>
+          <technique_common>
+            <accessor source="#ShapeIndexedFaceSet_001-mesh-normals-array" count="54" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ShapeIndexedFaceSet_001-mesh-vertices">
+          <input semantic="POSITION" source="#ShapeIndexedFaceSet_001-mesh-positions"/>
+        </vertices>
+        <triangles material="Shape_028-material" count="54">
+          <input semantic="VERTEX" source="#ShapeIndexedFaceSet_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ShapeIndexedFaceSet_001-mesh-normals" offset="1"/>
+          <p>23 0 24 0 17 0 24 1 29 1 26 1 4 2 23 2 10 2 26 3 29 3 5 3 6 4 27 4 9 4 1 5 13 5 22 5 21 6 3 6 12 6 7 7 15 7 20 7 19 8 8 8 11 8 8 9 1 9 7 9 29 10 24 10 23 10 7 11 1 11 3 11 25 12 26 12 27 12 25 13 24 13 26 13 22 14 6 14 9 14 28 15 17 15 25 15 22 16 9 16 16 16 20 17 4 17 10 17 29 18 23 18 4 18 20 19 10 19 14 19 11 20 10 20 2 20 27 21 26 21 9 21 11 22 2 22 19 22 12 23 9 23 5 23 3 24 22 24 12 24 3 25 1 25 22 25 15 26 7 26 21 26 12 27 5 27 21 27 8 28 20 28 11 28 10 29 23 29 18 29 13 30 1 30 19 30 17 31 28 31 2 31 23 32 17 32 18 32 12 33 22 33 16 33 17 34 2 34 18 34 28 35 25 35 27 35 18 36 2 36 10 36 11 37 20 37 14 37 26 38 5 38 9 38 6 39 28 39 27 39 13 40 6 40 22 40 13 41 28 41 6 41 16 42 9 42 12 42 21 43 7 43 3 43 15 44 4 44 20 44 15 45 29 45 4 45 14 46 10 46 11 46 8 47 7 47 20 47 19 48 28 48 13 48 19 49 2 49 28 49 19 50 1 50 8 50 24 51 25 51 17 51 21 52 29 52 15 52 21 53 5 53 29 53</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="ant-node" name="ant-node" type="NODE">
+        <matrix sid="transform">-1 -9.27964e-15 -1.50996e-7 0 -1.50996e-7 4.37114e-8 1 0 -2.6794e-15 1 -4.37114e-8 0 0 0 0 1</matrix>
+        <instance_geometry url="#ShapeIndexedFaceSet_001-mesh" name="ant-node">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Shape_028-material" target="#Shape_028-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

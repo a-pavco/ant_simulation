@@ -1,0 +1,35 @@
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find ant_control)/config/ant_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+   ns="/ant" args="joint_state_controller 
+  j_1_f_l_position_controller 
+  j_2_f_l_position_controller 
+  j_3_f_l_position_controller 
+  j_1_f_r_position_controller 
+  j_2_f_r_position_controller 
+  j_3_f_r_position_controller
+  j_1_m_l_position_controller
+  j_2_m_l_position_controller
+  j_3_m_l_position_controller
+  j_1_m_r_position_controller
+  j_2_m_r_position_controller
+  j_3_m_r_position_controller
+  j_1_r_l_position_controller
+  j_2_r_l_position_controller
+  j_3_r_l_position_controller
+  j_1_r_r_position_controller
+  j_2_r_r_position_controller
+  j_3_r_r_position_controller
+  "/> 
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/ant/joint_states" />
+  </node>
+
+</launch>
