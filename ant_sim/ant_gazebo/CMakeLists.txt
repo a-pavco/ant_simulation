@@ -5,8 +5,7 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros 
   rospy
   std_msgs
-  sensor_msgs
-  geometry_msgs    
+  sensor_msgs   
 )
 
 find_package(Boost REQUIRED COMPONENTS system)

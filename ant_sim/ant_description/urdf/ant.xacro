@@ -1791,52 +1791,35 @@
     </actuator>
   </transmission>
 
-<!--   <gazebo reference="eye_l">  
-    <material>Gazebo/Orange</material>
-  </gazebo> -->
- 
-
   <gazebo reference="tarsus_f_l">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
 
   <gazebo reference="tarsus_f_r">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
 
   <gazebo reference="tarsus_m_l">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
 
   <gazebo reference="tarsus_m_r">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
 
   <gazebo reference="tarsus_r_r">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
 
   <gazebo reference="tarsus_r_l">    
-    <mu1>1000</mu1>
-    <mu2>1000</mu2>
+    <mu1>100</mu1>
+    <mu2>50</mu2>
   </gazebo>
-
-  <material name="black">
-    <color rgba="0.0 0.0 0.0 1.0"/>
-  </material>
-
-  <material name="grey">
-    <color rgba="0.2 0.2 0.2 1.0"/>
-  </material>
-
-  <material name="brown">
-    <color rgba="${222/255} ${207/255} ${195/255} 1.0"/>
-  </material>
 
   <gazebo>
     <plugin filename="libgazebo_ros_control.so" name="gazebo_ros_control">

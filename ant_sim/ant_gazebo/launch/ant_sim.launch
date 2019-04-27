@@ -1,34 +1,28 @@
 <launch>
 
-  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
-  <arg name="paused" default="false"/>
-  <arg name="use_sim_time" default="true"/>
-  <arg name="gui" default="true"/>
-  <arg name="headless" default="false"/>
-  <arg name="debug" default="false"/>
-
-  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <!-- launch our world file, can change arguments for testing -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find ant_gazebo)/worlds/ant.world"/>
-    <arg name="debug" value="$(arg debug)" />
-    <arg name="gui" value="$(arg gui)" />
-    <arg name="paused" value="$(arg paused)"/>
-    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
-    <arg name="headless" value="$(arg headless)"/>
+    <arg name="debug" value="false" />
+    <arg name="gui" value="true" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="false"/>
   </include>
 
-  <!-- Load the URDF into the ROS Parameter Server -->
+  <!-- load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
     command="$(find xacro)/xacro --inorder '$(find ant_description)/urdf/ant.xacro'" />
 
-  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+  <!-- python script to the send a service call to gazebo_ros to spawn a URDF model -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" 
     args="-urdf -model ant -z 13 -param robot_description"/> 
 
   <!-- ros_control ant launch file -->
   <include file="$(find ant_control)/launch/ant_control.launch"/>
 
+  <!-- start our nodes -->
   <node name="ant_walk" pkg="ant_gazebo" type="walk.py" output="screen"/>
-  <node name="ant_keys" pkg="ant_gazebo" type="keys.py" output="screen"/>
-
+  <node name="ant_keys" pkg="ant_gazebo" type="keys.py" output="screen"/> 
+  
 </launch>

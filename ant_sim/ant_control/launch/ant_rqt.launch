@@ -1,0 +1,7 @@
+<launch>
+
+  <!-- load RQT with a pre-setup GUI from a perspective file  -->
+  <node name="ant_rqt" pkg="rqt_gui" type="rqt_gui" respawn="false"
+	output="screen" args="--perspective-file $(find ant_control)/launch/ant_rqt.perspective"/>
+
+</launch>

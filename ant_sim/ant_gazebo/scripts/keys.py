@@ -4,10 +4,6 @@ import rospy
 from std_msgs.msg import Int8
 
 def keys():
-    pub = rospy.Publisher('key', Int8, queue_size = 10)  
-    rospy.init_node('keypress', anonymous = True)
-    rate = rospy.Rate(5)
-
     while not rospy.is_shutdown():
         k = ord(getch.getch())
         #rospy.loginfo(str(k))
@@ -18,6 +14,9 @@ def keys():
         rate.sleep()
         
 if __name__=='__main__':
+    rospy.init_node('keys_node', anonymous = True)
+    pub = rospy.Publisher('/ant/key', Int8, queue_size = 1)  
+    rate = rospy.Rate(100)
     try:
         keys()
     except rospy.ROSInterruptException:

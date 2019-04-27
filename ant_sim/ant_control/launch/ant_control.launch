@@ -1,10 +1,9 @@
 <launch>
-
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find ant_control)/config/ant_control.yaml" command="load"/>
 
-  <!-- load the controllers -->
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+  <!-- Load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" 
    ns="/ant" args="joint_state_controller 
   j_1_f_l_position_controller 
   j_2_f_l_position_controller 
@@ -31,5 +30,4 @@
 	respawn="false" output="screen">
     <remap from="/joint_states" to="/ant/joint_states" />
   </node>
-
 </launch>
