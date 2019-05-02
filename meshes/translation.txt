@@ -1,3 +1,4 @@
+Data used to build URDF model:
 from dae centered coords: x, -z, -y
 
 
@@ -55,24 +56,6 @@ femur r r: 4.930989 -1.800083 0.5095381
 tibia r r: 6.778499 -4.287002 -0.8250852
 tarsus r r: 6.730211 -6.488528 -4.912447
 
-JOINTS outdated:
-
-front legs:
-thorax -> cox: x = 0.5
-cox -> trochanter: x = 0.1
-femur -> tibia: z = 1.3 rpy: y = 0.523599
-
-middle legs:
-thorax -> cox: x = 0.5
-cox -> trochanter: x = 0.1
-femur -> tibia: z = 1.3 x = 0.4 rpy: y = 1.91986
-
-rear legs:
-thorax -> cox: x = 0.5 y = 0.5
-cox -> trochanter: x = 0.5
-femur -> tibia: z = 1.3 x = 0.4 rpy: y = 1.91986
-
-troch r l x 0.5  y 0.1  rad 0.785398
 
 updated weight:
 head tot: 5.22
@@ -120,5 +103,5 @@ femur r: 0.125
 tibia r: 0.125
 tarsus r: 0.04
 
-v urdf hmotnost 1e-3 kvoli konverzii mg, kg, mravec mm a m
+in URDF weight 1e-3 cos of mg, kg, ant mm and m
 
