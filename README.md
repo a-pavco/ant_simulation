@@ -1,7 +1,7 @@
 # ant_simulation
 Master thesis - Ant simulation
 
-The goal is to plausibly simulate a walking ant.
+The goal is to plausibly simulate an walking ant.
 Implemented using Gazebo 9 and ROS Melodic Morenia.
 
 status: 4/2019 - key control, enviroment, finishing document
